@@ -1,0 +1,50 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PaperCard from '../../components/PaperCard.astro';
+
+export async function getStaticPaths() {
+  const papers = await getCollection('papers', ({ data }) => !data.draft);
+
+  const allTags = [...new Set(papers.flatMap(p => p.data.tags))];
+
+  return allTags.map(tag => ({
+    params: { tag },
+    props: {
+      tag,
+      papers: papers
+        .filter(p => p.data.tags.includes(tag))
+        .sort((a, b) => b.data.date.getTime() - a.data.date.getTime()),
+    },
+  }));
+}
+
+const { tag, papers } = Astro.props;
+---
+
+<BaseLayout title={`#${tag}`} description={`标签 #${tag} 下的所有论文，共 ${papers.length} 篇`}>
+  <div class="mb-8">
+    <a href="/tags/" class="text-sm text-slate-400 hover:text-indigo-500 dark:text-slate-500 dark:hover:text-indigo-400 transition-colors">
+      ← 所有标签
+    </a>
+    <h1 class="text-3xl font-bold text-slate-900 dark:text-slate-50 mt-2">
+      #{tag}
+    </h1>
+    <p class="text-slate-500 dark:text-slate-400 mt-1">共 {papers.length} 篇</p>
+  </div>
+
+  <div class="grid gap-3">
+    {papers.map(paper => (
+      <PaperCard
+        title={paper.data.title}
+        slug={paper.id}
+        date={paper.data.date}
+        tldr={paper.data.tldr}
+        tags={paper.data.tags}
+        rating={paper.data.rating}
+        venue={paper.data.venue}
+        arxiv={paper.data.arxiv}
+      />
+    ))}
+  </div>
+</BaseLayout>

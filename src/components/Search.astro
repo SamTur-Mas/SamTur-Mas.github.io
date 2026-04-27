@@ -1,0 +1,39 @@
+---
+---
+<div id="search-container" class="my-6">
+  <div id="search"></div>
+</div>
+
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+<script src="/pagefind/pagefind-ui.js" is:inline></script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    // @ts-ignore
+    new PagefindUI({
+      element: '#search',
+      showSubResults: true,
+      resetStyles: false,
+      translations: {
+        placeholder: '搜索论文...',
+        zero_results: '未找到结果 "[QUERY]"',
+      },
+    });
+  });
+</script>
+
+<style>
+  :root {
+    --pagefind-ui-primary: #6366f1;
+    --pagefind-ui-text: #334155;
+    --pagefind-ui-background: #ffffff;
+    --pagefind-ui-border: #e2e8f0;
+    --pagefind-ui-tag: #f1f5f9;
+  }
+  .dark {
+    --pagefind-ui-primary: #818cf8;
+    --pagefind-ui-text: #cbd5e1;
+    --pagefind-ui-background: #1e293b;
+    --pagefind-ui-border: #334155;
+    --pagefind-ui-tag: #1e293b;
+  }
+</style>

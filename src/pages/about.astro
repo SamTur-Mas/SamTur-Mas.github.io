@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="关于我" description="关于这个论文博客和作者">
+  <article class="prose prose-slate dark:prose-invert max-w-none
+    prose-headings:font-semibold
+    prose-a:text-indigo-600 dark:prose-a:text-indigo-400 prose-a:no-underline hover:prose-a:underline
+    prose-code:text-indigo-600 dark:prose-code:text-indigo-400 prose-code:bg-slate-100 dark:prose-code:bg-slate-800 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none
+  ">
+    <h1>关于我</h1>
+
+    <p>
+      你好！我是 <strong>你的名字</strong>，一名 [你的身份，如：计算机视觉方向的研究生]。
+    </p>
+
+    <p>
+      这里是我的个人论文阅读博客，用于记录我每天读的论文、分析摘要和个人感想。
+      坚持输出是我整理思路、加深理解的方式。
+    </p>
+
+    <h2>研究方向</h2>
+
+    <ul>
+      <li>计算机视觉（Computer Vision）</li>
+      <li>自监督学习（Self-supervised Learning）</li>
+      <li>多模态学习（Multimodal Learning）</li>
+    </ul>
+
+    <h2>论文评分标准</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>评分</th>
+          <th>含义</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>⭐⭐⭐⭐⭐ 5</td><td>必读经典，对领域有重大影响</td></tr>
+        <tr><td>⭐⭐⭐⭐ 4</td><td>优秀工作，创新点清晰，值得精读</td></tr>
+        <tr><td>⭐⭐⭐ 3</td><td>有参考价值，有一定新意</td></tr>
+        <tr><td>⭐⭐ 2</td><td>一般，了解思路即可</td></tr>
+        <tr><td>⭐ 1</td><td>仅作记录</td></tr>
+      </tbody>
+    </table>
+
+    <h2>联系方式</h2>
+
+    <ul>
+      <li>GitHub: <a href="https://github.com/yourusername" target="_blank" rel="noopener">@yourusername</a></li>
+      <li>Email: <a href="mailto:you@example.com">you@example.com</a></li>
+    </ul>
+  </article>
+</BaseLayout>
