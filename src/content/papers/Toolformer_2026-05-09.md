@@ -1,3 +1,14 @@
+---
+title: "Toolformer: Language Models Can Teach Themselves to Use Tools"
+date: 2023-07-01
+arxiv: "2302.04761"
+venue: NeurIPS 2023
+authors: ["Timo Schick", "Jane Dwivedi-Yu", "Roberto Dessì", "Roberta Raileanu", "Maria Lomeli", "Luke Zettlemoyer", "Nicola Cancedda", "Thomas Scialom"]
+tags: ["Tool-Use", "LLM", "Self-Supervised", "API-Calling", "Function-Calling"]
+rating: 5
+tldr: "让LLM通过自监督学习自主学会在合适时机调用外部工具（计算器、搜索、翻译、QA、日历），仅靠少量示例即让GPT-J在数学推理上超越GPT-3 175B。"
+---
+
 # Toolformer: Language Models Can Teach Themselves to Use Tools
 
 **arXiv**: [2302.04761](https://arxiv.org/abs/2302.04761)
