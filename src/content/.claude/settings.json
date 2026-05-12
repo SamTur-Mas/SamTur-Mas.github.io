@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(paper-analyze)",
+      "Skill(paper-analyze:*)"
+    ]
+  }
+}
