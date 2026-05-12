@@ -1,6 +1,6 @@
 ---
 title: "Toolformer: Language Models Can Teach Themselves to Use Tools"
-date: 2023-07-01
+date: 2026-05-06
 arxiv: "2302.04761"
 venue: NeurIPS 2023
 authors: ["Timo Schick", "Jane Dwivedi-Yu", "Roberto Dessì", "Roberta Raileanu", "Maria Lomeli", "Luke Zettlemoyer", "Nicola Cancedda", "Thomas Scialom"]

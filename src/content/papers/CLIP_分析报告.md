@@ -1,6 +1,6 @@
 ---
 title: "Learning Transferable Visual Models From Natural Language Supervision"
-date: 2021-02-26
+date: 2026-05-12
 arxiv: "2103.00020"
 venue: "ICML 2021"
 authors: ["Alec Radford", "Jong Wook Kim", "Chris Hallacy", "Aditya Ramesh", "Gabriel Goh", "Sandhini Agarwal", "Girish Sastry", "Amanda Askell", "Pamela Mishkin", "Jack Clark", "Gretchen Krueger", "Ilya Sutskever"]
